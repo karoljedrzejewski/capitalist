@@ -1,10 +1,13 @@
 import pygame
+from programmer import Programmer
 
-class Player():
+class Player(Programmer):
     def __init__(self, x=50, y=540, balance=1000):
         self.x = x
         self.y = y
         self.balance = balance
+        self.creativity = 50
+
 
     def move(self):
         keys = pygame.key.get_pressed()
@@ -22,3 +25,5 @@ class Player():
 
     def pay(self):
         self.balance -= 10
+
+    

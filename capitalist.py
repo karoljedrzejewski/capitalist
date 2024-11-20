@@ -1,6 +1,7 @@
 import pygame
 from player import Player
 from UI import draw_text
+import programmer
 pygame.init()
 
 window = pygame.display.set_mode((1920, 1080))
@@ -23,8 +24,8 @@ def main():
         window.fill((20, 100, 200))
         model.x = p.x
         model.y = p.y
-        draw_text(window, f"Balance: {p.balance}", (50, 50))
         pygame.draw.rect(window, (0, 0, 0), model)
+        draw_text(window, f"Balance: {p.balance}$", (50, 50))
         p.move()
 
         pygame.display.update()
